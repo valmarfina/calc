@@ -13,14 +13,14 @@ import tools.Addtion;
 public class ExpressionController {
     @GetMapping("/index")
     public String ViewForm(Model model) {
-        model.addAttribute("addition", new Addtion());
+        model.addAttribute("Addition", new Addtion());
         return "index";
     }
 
     @PostMapping("/addition")
-    public String addForm(@ModelAttribute Addtion addition, BindingResult result, Model model) {
-        model.addAttribute("addition", addition);
-        return "index";
+    public String addForm(@ModelAttribute Addtion addtion, BindingResult result, Model model) {
+        model.addAttribute("addition", addtion);
+        return "calculate";
     }
 
 }

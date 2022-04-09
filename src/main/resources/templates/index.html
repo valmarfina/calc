@@ -10,18 +10,18 @@
 <div class="container">
     <div class="row">
         <div>
-            <h1>Введите выражение</h1>
+            <h1>enter</h1>
         </div>
         <form th:action="@{addition}" th:object="${addition}" method="post">
             <div>
-                <input type="text" id="num1" class="form-control" name="num1" >
+                <input type="text" id="num1" class="form-control" name="num1">
             </div>
             <div>
-                <input type="submit" value="посчитать" />
+                <input type="submit" value="submit"/>
             </div>
         </form>
     </div>
 </div>
-<p th:text="${addition.getResult()}"></p>
+
 </body>
 </html>

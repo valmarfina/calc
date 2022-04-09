@@ -27,7 +27,7 @@ public class Calculator {
             numList.addFirst(Objects.requireNonNull(operList.poll()).calc(numList.poll(), numList.poll()));
     }
 
-    public static void getResult(String expr) {
+    public static double getResult(String expr) {
         expr = expr.replaceAll(" ", "");
         try {
             for (; ; ) {
@@ -58,6 +58,8 @@ public class Calculator {
         }
 
         System.out.println("результат: " + numList.poll());
+        return numList.poll();
+
     }
 }
 
