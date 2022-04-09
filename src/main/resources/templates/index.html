@@ -7,16 +7,21 @@
 
 </head>
 <body>
-<h1>Input exp</h1>
-<form th:action="@{needStr}" th:object="${needStr}" method="post">
-    <div>
-        <input type="text" id="num1" class="form-control" name="num1">
+<div class="container">
+    <div class="row">
+        <div>
+            <h1>Введите выражение</h1>
+        </div>
+        <form th:action="@{addition}" th:object="${addition}" method="post">
+            <div>
+                <input type="text" id="num1" class="form-control" name="num1" >
+            </div>
+            <div>
+                <input type="submit" value="посчитать" />
+            </div>
+        </form>
     </div>
-    <div>
-        <input type="submit" value="submit"/>
-    </div>
-</form>
-<h3>Result</h3>
-<p th:text="${needStr.getResult()}"></p>
+</div>
+<p th:text="${addition.getResult()}"></p>
 </body>
 </html>
